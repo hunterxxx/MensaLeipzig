@@ -1,0 +1,63 @@
+{
+  "cameras": [
+    {
+      "id": "hunter-jpx",
+      "name": "hunterxxxmco",
+      "owner": "hunterxxx",
+      "vendor_id": "evercam-capture",
+      "vendor_name": "Evercam Capture",
+      "model_id": "front-camera-2",
+      "model_name": "FRONT CAMERA",
+      "created_at": 1448751207,
+      "updated_at": 1448791735,
+      "last_polled_at": 1448751207,
+      "last_online_at": 1448751207,
+      "timezone": "Europe/Berlin",
+      "is_online": false,
+      "is_public": true,
+      "discoverable": true,
+      "cam_username": "AIv4Pn",
+      "cam_password": "rp1XKY",
+      "mac_address": "64:09:80:cb:fa:3b",
+      "location": {
+        "lat": 52.47886,
+        "lng": 13.452668
+      },
+      "external": {
+        "host": "ssh.evercam.io",
+        "http": {
+          "port": 10592,
+          "camera": "http://ssh.evercam.io:10592",
+          "jpg": "http://ssh.evercam.io:10592/front.jpg",
+          "mjpg": ""
+        },
+        "rtsp": {
+          "port": null,
+          "mpeg": "",
+          "audio": "",
+          "h264": ""
+        }
+      },
+      "internal": {
+        "host": "192.168.2.197",
+        "http": {
+          "port": 8080,
+          "camera": "http://192.168.2.197:8080",
+          "jpg": "http://192.168.2.197:8080/front.jpg",
+          "mjpg": ""
+        },
+        "rtsp": {
+          "port": null,
+          "mpeg": "",
+          "audio": "",
+          "h264": ""
+        }
+      },
+      "proxy_url": {
+        "hls": "",
+        "rtmp": ""
+      },
+      "thumbnail_url": ""
+    }
+  ]
+}

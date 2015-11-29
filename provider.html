@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Travel 4 You</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 20px; 
+      }
+      #map {
+        height: 50%;
+        width: 70%;
+        float: right;
+      }
+    </style>
+     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+<body>
+ <div id="map"></div>
+    <script>
+
+function initMap() {
+  var myLatLng = {lat: 52.479049, lng: 13.452906};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 18,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Colonia Nova!'
+  });
+}
+
+    </script>
+    <<div style="float: left;">
+    <div id='ec-container-hunter-ul6' style='width: 400px'></div></div> <script src='https://dash.evercam.io/live.view.widget.js?refresh=0.1&camera=hunter-ul6&private=false' async></script></div>
+     <<div style="float: left;"><script async defer
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script></div>
+        <h1>Exploring Colonia Nova...</h1>
+
+
+</body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://getbootstrap.com/2.3.2/examples/starter-template.html#">Travel 4 You</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="home.html#">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="provider.html">Provider</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+</html>

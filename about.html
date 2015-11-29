@@ -1,0 +1,48 @@
+<div id="id01"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "hello.txt";
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var myArr = JSON.parse(xmlhttp.responseText);
+        myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' + 
+        arr[i].display + '</a><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+asdasdAAAA
+<script>
+function get_json(url, callback) {
+    http.get(url, function(res) {
+        var body = '';
+        res.on('data', function(chunk) {
+            body += chunk;
+        });
+
+        res.on('end', function() {
+            var response = JSON.parse(body);
+// call function ----v
+            callback(response);
+        });
+    });
+}
+
+         // -----------the url---v         ------------the callback---v
+var mydata = get_json("https://api.evercam.io/v1/cameras?ids=hunter-jpx&api_id=54ab6bad&api_key=5837fa333c0027b89c71687f5036819c", function (resp) {
+    console.log(resp);
+});
+
+</script>

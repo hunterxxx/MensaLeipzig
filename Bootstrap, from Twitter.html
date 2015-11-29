@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://getbootstrap.com/2.3.2/examples/starter-template.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="./Bootstrap, from Twitter_files/bootstrap.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 60px;
+      }
+      #map {
+        height: 50%;
+      }
+    </style>
+    <link href="./Bootstrap, from Twitter_files/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png">
+  <style type="text/css"></style></head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://getbootstrap.com/2.3.2/examples/starter-template.html#">Travel4U</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="http://getbootstrap.com/2.3.2/examples/starter-template.html#">Home</a></li>
+              <li><a href="http://getbootstrap.com/2.3.2/examples/starter-template.html#about">About</a></li>
+              <li><a href="http://getbootstrap.com/2.3.2/examples/starter-template.html#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>Bootstrap starter template</h1>
+      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Bootstrap, from Twitter_files/jquery.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-transition.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-alert.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-modal.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-dropdown.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-scrollspy.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-tab.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-tooltip.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-popover.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-button.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-collapse.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-carousel.js"></script>
+    <script src="./Bootstrap, from Twitter_files/bootstrap-typeahead.js"></script>
+
+    function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 11,
+    center: {lat: 52.521948, lng: 13.409796}
+  });
+
+  setMarkers(map);
+}
+
+// Data for the markers consisting of a name, a LatLng and a zIndex for the
+// order in which these markers should display on top of each other.
+var beaches = [
+  ['Berlin hbf', 52.525306, 13.369381, 4],
+  ['Leipzig halle flughafen', 51.422309, 12.220380, 5],
+  ['Colonia Nova', 52.479033, 13.452906, 3],
+  ['Brandenburger Gate', 52.516464, 13.377650, 2],
+  ['Berlin Museum', 52.503349, 13.395376, 1]
+];
+
+function setMarkers(map) {
+  // Adds markers to the map.
+
+  // Marker sizes are expressed as a Size of X,Y where the origin of the image
+  // (0,0) is located in the top left of the image.
+
+  // Origins, anchor positions and coordinates of the marker increase in the X
+  // direction to the right and in the Y direction down.
+  var image = {
+    url: 'images/beachflag.png',
+    // This marker is 20 pixels wide by 32 pixels high.
+    size: new google.maps.Size(20, 32),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(0, 32)
+  };
+  // Shapes define the clickable region of the icon. The type defines an HTML
+  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+  // The final coordinate closes the poly by connecting to the first coordinate.
+  var shape = {
+    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+    type: 'poly'
+  };
+  for (var i = 0; i < beaches.length; i++) {
+    var beach = beaches[i];
+    var marker = new google.maps.Marker({
+      position: {lat: beach[1], lng: beach[2]},
+      map: map,
+      icon: image,
+      shape: shape,
+      title: beach[0],
+      zIndex: beach[3]
+    });
+  }
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+        <div id = "confirm"></div>
+        <h1>Explore this area?</h1>
+  <form action="" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_2nIUrNtzGhHJoE9GqBEXMlNq"
+    data-amount="100"
+    data-name="Pay to Hunter"
+    data-description="2 widgets ($1.00)"
+    data-image="/128x128.png"
+    data-locale="auto">
+  </script>
+</form>
+  </body>
+</html>
+
+  
+
+</body></html>
