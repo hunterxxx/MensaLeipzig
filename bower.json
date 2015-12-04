@@ -1,0 +1,25 @@
+{
+  "name": "cpm-ng",
+  "version": "3.2.0",
+  "authors": [
+    "Martin Klenk <m.klenk@celonis.de>"
+  ],
+  "main": "app.js",
+  "license": "Celonis Proprietary License",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  },
+  "overrides": {
+  },
+  "resolutions": {
+  },
+  "devDependencies": {
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "cel.ng.plugin",
+  "version": "4.0.0",
+  "devDependencies": {
+    "assetsmanager-brunch": "^1.8.1",
+    "auto-reload-brunch": ">= 1.0 < 1.8",
+    "autoprefixer": "5.1.0",
+    "autoprefixer-brunch": "~1.8.4",
+    "cheerio": "~0.19.0",
+    "coffee-script-brunch": ">= 1.0 < 1,8",
+    "css-brunch": ">= 1.0 < 1,8",
+    "jade": "~0.33",
+    "jade-angularjs-brunch": "~1.1.1",
+    "javascript-brunch": ">= 1.0 < 1,8",
+    "jshint": "^2.6.0",
+    "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.31",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sinon-chai": "^0.3.0",
+    "load-grunt-tasks": "~1.0.0",
+    "mocha": "^2.1.0",
+    "ng-annotate-uglify-js-brunch": ">= 1.0 < 1.8",
+    "node-dir": "~0.1.8",
+    "postcss-brunch": "~0.5.0",
+    "sass-brunch": "~1.8.6",
+    "uglify-js-brunch": "~1.7.7",
+    "brunch": "~1.8.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "description": "CPM4 Visualization Plugin Project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Celonis GmbH",
+  "license": "Celonis Proprietary License",
+  "dependencies": {}
+}
