@@ -17,4 +17,19 @@ angular.module('cel.ng').run(function(componentFactory) {
             height: 10      
         }
 	});	
+	componentFactory.registerComponent('sample-d3-component', {
+		fullPath: true,
+        view: 'plugin/sample_d3/SampleD3',
+        icon: 'image-lg',
+        category: 'design_components',
+        name: 'Sample D3 Component',
+        placeholder: 'app/pages/analysis/component_browser/CeNewComponentPlaceholder.jade',
+        hasBackground: true,
+        hasBorder: true,
+        defaults: {
+            width: 30,
+            height: 10      
+        }
+	});	
+
 });

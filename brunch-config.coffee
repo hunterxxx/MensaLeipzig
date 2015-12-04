@@ -20,6 +20,8 @@ exports.config =
         templates:
             joinTo:
                 'js/dontUseMe' : /^plugin/ # dirty hack for Jade compiling.
+    server:
+        port: 9550
     plugins:
         jade:
             pretty: yes # Adds pretty-indentation whitespaces to output (false by default)
