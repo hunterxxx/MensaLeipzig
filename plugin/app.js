@@ -1,7 +1,12 @@
 // Load the plugin's templates
 angular.module('cel.ng').requires.push('plugin.templates');
+
+$.getScript('http://localhost:9550/js/vendor.js', function() {
+    console.log(arguments);
+});
+
 // add our plugin to the component registry.
-angular.module('cel.ng').run(function(componentFactory) {
+angular.module('cel.ng'). run(function(componentFactory) {
 	// register your component here
 	componentFactory.registerComponent('sample-component', {
 		fullPath: true,
@@ -14,9 +19,9 @@ angular.module('cel.ng').run(function(componentFactory) {
         hasBorder: true,
         defaults: {
             width: 30,
-            height: 10      
+            height: 10
         }
-	});	
+	});
 	componentFactory.registerComponent('sample-d3-component', {
 		fullPath: true,
         view: 'plugin/sample_d3/SampleD3',
@@ -28,10 +33,10 @@ angular.module('cel.ng').run(function(componentFactory) {
         hasBorder: true,
         defaults: {
             width: 30,
-            height: 10      
+            height: 10
         }
-	});	
-	
+	});
+
 	componentFactory.registerComponent('whatever-airplane', {
 		fullPath: true,
         view: 'plugin/airplane/Airplane',
@@ -43,7 +48,7 @@ angular.module('cel.ng').run(function(componentFactory) {
         hasBorder: true,
         defaults: {
             width: 30,
-            height: 10      
+            height: 10
         }
-	});	
+	});
 });
