@@ -15,7 +15,7 @@ angular.module('cel.ng').controller('pluginSampleCtrl', function($scope, pqlServ
 		// As the component you can always pass $scope.component.
 		//
 		// It returns a promise.
-		pqlService.query('TABLE ( COUNT_TABLE ( "SomeTableName" ) )', false, $scope.component).then(function(result) {
+		pqlService.query('TABLE(COUNT_TABLE("_CEL_O2C_ACTIVITIES"))', false, $scope.component).then(function(result) {
 			console.log(result);
 			// the result returned by the pql service contains a tabular view on the data table as well as some meta data.
 			// You can access the data using the result.data property. result.data is a two-dimensional array which contains

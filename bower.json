@@ -14,12 +14,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-  },
-  "overrides": {
-  },
-  "resolutions": {
-  },
-  "devDependencies": {
-  }
+  "dependencies": {},
+  "overrides": {},
+  "devDependencies": {}
 }
