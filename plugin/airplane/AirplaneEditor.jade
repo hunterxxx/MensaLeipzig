@@ -1,0 +1,11 @@
+div.modal-content.filling-space.with-header.with-footer.full-height
+    div.modal-header
+        button.btn.btn-icon.pull-right(ng-click="panel.closeConfigPanel()")
+            i.fa.fa-fw.fa-times
+        .modal-title Sample D3 Component
+    div.modal-body
+        p Put configuration options here. Access the component configuration via scope.panel.component.
+        p Current configuration is: {{panel.component | json }}
+        
+    div.modal-footer
+        button.btn.btn-primary.pull-right(ng-click="panel.closeConfigPanel()") Done

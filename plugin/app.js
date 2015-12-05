@@ -31,5 +31,19 @@ angular.module('cel.ng').run(function(componentFactory) {
             height: 10      
         }
 	});	
-
+	
+	componentFactory.registerComponent('whatever-airplane', {
+		fullPath: true,
+        view: 'plugin/airplane/Airplane',
+        icon: 'image-lg',
+        category: 'design_components',
+        name: 'Whatever Airplanes',
+        placeholder: 'app/pages/analysis/component_browser/CeNewComponentPlaceholder.jade',
+        hasBackground: true,
+        hasBorder: true,
+        defaults: {
+            width: 30,
+            height: 10      
+        }
+	});	
 });
