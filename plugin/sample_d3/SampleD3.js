@@ -11,6 +11,7 @@ angular.module('cel.ng').directive('pluginSampleD3', function() {
 			// Do stuff with root elem.
 
 
+            $scope.myData = [10,20,30,40,60];
 			// hook up the reload events
 			scope.component.$reload = function() {
 				// The reload event is triggered by the application when the component is required to get new data.

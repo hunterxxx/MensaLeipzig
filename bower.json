@@ -15,7 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "d3-geo-projection": "~0.2.15"
+    "queue-async": "https://github.com/mbostock/queue.git#1.0.7",
+    "requirejs": "~2.1.22",
+    "topojson": "~1.6.19"
   },
   "overrides": {},
   "devDependencies": {}
