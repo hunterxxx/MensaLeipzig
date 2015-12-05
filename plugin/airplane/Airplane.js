@@ -36,7 +36,11 @@ angular.module('cel.ng').directive('pluginAirplane', function() {
 						'"TargetAirports.csv"."Longitude"' + 
 					')', 
 				false, scope.component).then(function(result) {
-					
+					for(i=0; i<result.data.length; i++){
+						for(j=0; j<result.data[i].length; j++){
+							console.log(result.data[i][j]);
+						}						
+					}
 				});
 			}
 		}
