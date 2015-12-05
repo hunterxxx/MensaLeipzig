@@ -21,7 +21,7 @@
 
 .noclicks { pointer-events:none; }
 
-.point {  opacity:.6; }
+.point {  opacity:1; }
 
 .arcs {
     opacity:.1;
