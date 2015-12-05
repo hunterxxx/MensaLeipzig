@@ -1,3 +1,11 @@
+function CoordsToX(lon, lat) {
+
+}
+
+function CoordsToY(lon, lat) {
+
+}
+
 angular.module('cel.ng').directive('pluginAirplane', function() {
 	return {
 		link: function(scope, elem) {
@@ -6,7 +14,10 @@ angular.module('cel.ng').directive('pluginAirplane', function() {
 				.style('position', 'absolute')
 				.style('width', '100%')
 				.style('height', '100%')
-				.style('background-color', 'blue');
+				.append('img')
+				.attr('src', 'https://upload.wikimedia.org/wikipedia/commons/9/91/Winkel_triple_projection_SW.jpg')
+				.style('width', '100%')
+				.style('height', 'auto');
 
 			// Do stuff with root elem.
 
@@ -24,10 +35,11 @@ angular.module('cel.ng').directive('pluginAirplane', function() {
 					'TABLE( ' + 
 						'"AirlineRoutes.csv"."Airline", ' +
 						'"AirlineRoutes.csv"."Equipment", ' +
-					      	'"SourceAirports.csv"."Latitude", ' +
+						'"SourceAirports.csv"."Latitude", ' +
 						'"SourceAirports.csv"."Longitude", ' +
 						'"TargetAirports.csv"."Latitude", ' +
-						'"TargetAirports.csv"."Longitude")', 
+						'"TargetAirports.csv"."Longitude"' + 
+					')', 
 					false, scope.component).then(function(result) {
 					console.log(result);
 				});
