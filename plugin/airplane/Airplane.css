@@ -8,7 +8,7 @@
     fill: none;
     stroke: black;
     stroke-width:.5;
-    opacity:.2;
+    opacity:1;
 }
 
 .labels {
@@ -74,7 +74,7 @@ body {
 }
 
 .globe {
-    stroke: rgba(255, 255, 255, .5);
+    stroke: rgba(255, 0, 0, 1);
     stroke-width: .25px;
 }
 

@@ -2,7 +2,6 @@ angular.module('cel.ng').directive('pluginAirplane', function () {
     return {
         link: function (scope, elem, http) {
             // Unwrap jquery/jqLite wrapped element.
-
             function refreshGlobe ()
             {
                 svg.selectAll(".land")
@@ -10,12 +9,16 @@ angular.module('cel.ng').directive('pluginAirplane', function () {
                     .enter().append('path')
                     .attr('class','land')
                     .attr("d", path);
+		svg.insert("path", ".land")
+	    		.datum({type: "Point", coordinates: [0, 0]})
+	    		.attr("class", "point")
+	    		.attr("d", path);
             }
             var width = 600;
             var height = 400;
 
-            var sc = Math.min(width,height) * 0.5
-            var lat = -180
+            var sc = Math.min(width,height) * 0.5;
+            var lat = 0;
             var projection = d3.geo.orthographic()
                 .scale(sc)
                 .translate([width/2,height/2])
@@ -28,6 +31,7 @@ angular.module('cel.ng').directive('pluginAirplane', function () {
 
             var svg = d3.select(elem.get(0)).append('div').append("svg")
                 .attr("width", width)
+		.attr('id', 'svg-canvas')
                 .attr("height", height);
 
             console.log(worldtopo);
@@ -39,6 +43,7 @@ angular.module('cel.ng').directive('pluginAirplane', function () {
                 projection.rotate([lat,0]);
                 svg.selectAll(".land")
                     .attr("d", path);
+	        svg.selectAll(".point").attr("d", path);
             },100);
 
 
