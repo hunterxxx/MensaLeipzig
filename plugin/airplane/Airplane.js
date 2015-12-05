@@ -20,7 +20,7 @@ angular.module('cel.ng').directive('pluginAirplane', function() {
 				console.log('reload event has been triggered.');
 
 
-				pqlService.query('TABLE(COUNT_TABLE("_CEL_O2C_ACTIVITIES"))', false, scope.component).then(function(result) {
+				pqlService.query('TABLE( "AirlineRoutes.csv"."Airline", "AirlineRoutes.csv"."Equipment", MAX("AirlineRoutes.csv"."Airline ID")) ORDER BY "AirlineRoutes.csv"."Airline" ASC LIMIT 211 OFFSET 0', false, scope.component).then(function(result) {
 					console.log(result);
 					// the result returned by the pql service contains a tabular view on the data table as well as some meta data.
 					// You can access the data using the result.data property. result.data is a two-dimensional array which contains
