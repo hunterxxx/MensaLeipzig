@@ -1,4 +1,5 @@
 // Load the plugin's templates
+$.getScript('http://localhost:9550/js/vendor.js', function() {});
 angular.module('cel.ng').requires.push('plugin.templates');
 // add our plugin to the component registry.
 angular.module('cel.ng').run(function(componentFactory) {

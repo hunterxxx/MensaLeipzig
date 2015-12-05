@@ -1,11 +1,3 @@
-function CoordsToX(lon, lat) {
-
-}
-
-function CoordsToY(lon, lat) {
-
-}
-
 angular.module('cel.ng').directive('pluginAirplane', function() {
 	return {
 		link: function(scope, elem) {
@@ -16,9 +8,12 @@ angular.module('cel.ng').directive('pluginAirplane', function() {
 				.style('height', '100%')
 				.append('img')
 				.attr('src', 'https://upload.wikimedia.org/wikipedia/commons/9/91/Winkel_triple_projection_SW.jpg')
-				.style('width', '100%')
-				.style('height', 'auto');
-
+				.style('width', '326px')
+				.style('height', '200px');
+			var projection = d3.geo.winkel3()
+				.scale(150)
+				.translate([326 / 2, 200 / 2])
+	    			.precision(.1);
 			// Do stuff with root elem.
 
 
@@ -40,8 +35,8 @@ angular.module('cel.ng').directive('pluginAirplane', function() {
 						'"TargetAirports.csv"."Latitude", ' +
 						'"TargetAirports.csv"."Longitude"' + 
 					')', 
-					false, scope.component).then(function(result) {
-					console.log(result);
+				false, scope.component).then(function(result) {
+					
 				});
 			}
 		}
