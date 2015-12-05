@@ -32,6 +32,8 @@ angular.module('cel.ng').directive('pluginAirplane', function () {
 
             console.log(worldtopo);
 
+            refreshGlobe();
+
             setInterval(function(){
                 lat = lat +1.50
                 projection.rotate([lat,0]);
