@@ -1,0 +1,24 @@
+{
+  "name": "cpm-ng",
+  "version": "3.2.0",
+  "authors": [
+    "Martin Klenk <m.klenk@celonis.de>"
+  ],
+  "main": "app.js",
+  "license": "Celonis Proprietary License",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "queue-async": "https://github.com/mbostock/queue.git#1.0.7",
+    "requirejs": "~2.1.22",
+    "topojson": "~1.6.19"
+  },
+  "overrides": {},
+  "devDependencies": {}
+}

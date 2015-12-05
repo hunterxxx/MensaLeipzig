@@ -1,0 +1,10 @@
+div.modal-content.filling-space.with-header.with-footer.full-height(ng-controller="pluginSampleEditorCtrl as sampleEditor")
+    div.modal-header
+        button.btn.btn-icon.pull-right(ng-click="panel.closeConfigPanel()")
+            i.fa.fa-fw.fa-times
+        .modal-title Sample Component
+    div.modal-body
+        | Put configuration options here.
+        
+    div.modal-footer
+        button.btn.btn-primary.pull-right(ng-click="panel.closeConfigPanel()") Done
